@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8971900320957906647}
+  - component: {fileID: 8968735478315530911}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -31,6 +32,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8968735478315530911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8971900320957906646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 333cedf3cac304b7c9da8397a03de095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8971900321958745847
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,6 +53,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8971900321958745848}
+  - component: {fileID: 4886272173959354303}
   m_Layer: 0
   m_Name: SkillPointManager
   m_TagString: Untagged
@@ -61,3 +75,16 @@ Transform:
   m_Father: {fileID: 8971900320957906647}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4886272173959354303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8971900321958745847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d46c1bed822804aedbb69f8219d46ab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSkillPoint: 0

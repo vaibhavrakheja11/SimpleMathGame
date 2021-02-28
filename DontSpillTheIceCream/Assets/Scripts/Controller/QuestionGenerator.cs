@@ -10,8 +10,8 @@ namespace DropIceCream
         Question m_question;
 
         string[] easyWords = { "Bold", "Think", "Friend", "Pony", "Fall", "Easy" };
-        string[] mediumWords = { "Bold", "Think", "Friend", "Pony", "Fall", "Easy" };
-        string[] hardWords = { "Bold", "Think", "Friend", "Pony", "Fall", "Easy" };
+        string[] mediumWords = { "angle", "basic", "catch", "daily", "event", "frame", "grade", "heart", "judge", "learn" };
+        string[] hardWords = { "aboard", "babble", "camera", "dancer", "enroll", "farmer", "gentle", "hacker", "inborn", "jumble" };
         Tuple<int, int> easyRange= new Tuple<int,int>(0,100);
         Tuple<int, int> mediumRange= new Tuple<int,int>(300,1000);
         Tuple<int, int> hardRange= new Tuple<int,int>(1000,10000);
@@ -20,7 +20,18 @@ namespace DropIceCream
         public Question GenerateMissiongWordQuestion()
         {
             m_question = new Question();
-            m_question.word = CreateRandomWordCombination(easyWords);
+            switch(GameController.Instance.levelManager.currentDifficulty)
+            {
+                case Difficulty.Easy:
+                    m_question.word = CreateRandomWordCombination(easyWords);
+                    break;
+                case Difficulty.Medium:
+                    m_question.word = CreateRandomWordCombination(mediumWords);
+                    break;
+                case Difficulty.Hard:
+                    m_question.word = CreateRandomWordCombination(hardWords);
+                    break;
+            }
             Tuple<string,char> missingWord = GetMaskedWord(m_question.word);
             m_question.questionType = QuestionType.MissingWord;
             m_question.missingWordResult = missingWord.Item2;
@@ -31,7 +42,19 @@ namespace DropIceCream
         public Question GeneratSimpleMathQuestion()
         {
             m_question = new Question();
-            Tuple<int,int> simpelMath = CreateRandomSimpleMathCombination(easyRange);;
+            Tuple<int,int> simpelMath = new Tuple<int, int>(0,0);
+            switch(GameController.Instance.levelManager.currentDifficulty)
+            {
+                case Difficulty.Easy:
+                    simpelMath = CreateRandomSimpleMathCombination(easyRange);
+                    break;
+                case Difficulty.Medium:
+                    simpelMath = CreateRandomSimpleMathCombination(mediumRange);
+                    break;
+                case Difficulty.Hard:
+                    simpelMath = CreateRandomSimpleMathCombination(hardRange);
+                    break;
+            }
             m_question.questionType = QuestionType.SimpleMaths;
             m_question.firtInt = simpelMath.Item1;
             m_question.secondInt = simpelMath.Item2;

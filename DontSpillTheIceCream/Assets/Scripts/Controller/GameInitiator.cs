@@ -54,6 +54,7 @@ namespace DropIceCream
                 if(result.ToLower().Equals(question.missingWordResult.ToString().ToLower()))
                 {
                     Debug.Log("Correct Answer");
+                    GameController.Instance.skillPointManager.IncreaseSkillPoints();
                     NextQuestion();
                 }
                 else
@@ -66,6 +67,7 @@ namespace DropIceCream
                 if(Int32.Parse(result) == question.simpleMathResult)
                 {
                     Debug.Log("Correct Answer");
+                    GameController.Instance.skillPointManager.IncreaseSkillPoints();
                     NextQuestion();
                 }
                 else

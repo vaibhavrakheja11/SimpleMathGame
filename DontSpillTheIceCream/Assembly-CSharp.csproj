@@ -38,9 +38,11 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Controller\GameController.cs" />
      <Compile Include="Assets\Scripts\Controller\GameInitiator.cs" />
+     <Compile Include="Assets\Scripts\Controller\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Controller\QuestionGenerator.cs" />
      <Compile Include="Assets\Scripts\Controller\SkillPointManager.cs" />
      <Compile Include="Assets\Scripts\Model\Question.cs" />
+     <Compile Include="Assets\Scripts\View\HeaderUI.cs" />
      <Compile Include="Assets\Scripts\View\MissingWordScript.cs" />
      <Compile Include="Assets\Scripts\View\PlayAreamUI.cs" />
      <Compile Include="Assets\Scripts\View\QuestionAreaUIController.cs" />

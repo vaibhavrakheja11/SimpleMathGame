@@ -1,18 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class SkillPointManager : MonoBehaviour
+namespace DropIceCream
 {
-    // Start is called before the first frame update
-    void Start()
+    public class SkillPointManager : MonoBehaviour
     {
-        
-    }
+       const int IncrementSkillPoint = 10;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+       public static event Action<int> handleSkillPointIncrease;
+
+        public int currentSkillPoint = 0;
+
+        public void IncreaseSkillPoints()
+        {
+            currentSkillPoint += IncrementSkillPoint;
+            handleSkillPointIncrease.Invoke(currentSkillPoint);
+        }
     }
 }
+

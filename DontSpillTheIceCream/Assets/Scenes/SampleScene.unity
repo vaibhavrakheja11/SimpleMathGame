@@ -374,6 +374,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1010088840 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8785830765810720348, guid: 563854efe26b44687bc7bd202ae4a63a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2935147708558171068}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1012016489 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2935147707821331284, guid: 563854efe26b44687bc7bd202ae4a63a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2935147708558171068}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1012016491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012016489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7c9975facddc4977a42d77df0dabc5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SkillString: {fileID: 1010088840}
+  m_LevelString: {fileID: 1338299876}
+  questionDifficultyString: {fileID: 1707485388}
+--- !u!114 &1338299876 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6683132500594339356, guid: 563854efe26b44687bc7bd202ae4a63a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2935147708558171068}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1707485388 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3799244471129293258, guid: 563854efe26b44687bc7bd202ae4a63a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2935147708558171068}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1582934663396855725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -386,6 +443,16 @@ PrefabInstance:
       propertyPath: viewController
       value: 
       objectReference: {fileID: 215779679}
+    - target: {fileID: 1582934664002497429, guid: 069775205a8e64b3ba428b27c00d4a76,
+        type: 3}
+      propertyPath: levelManager
+      value: 
+      objectReference: {fileID: 1582934663396855727}
+    - target: {fileID: 1582934664002497429, guid: 069775205a8e64b3ba428b27c00d4a76,
+        type: 3}
+      propertyPath: skillPointManager
+      value: 
+      objectReference: {fileID: 1582934663396855726}
     - target: {fileID: 1582934664002497434, guid: 069775205a8e64b3ba428b27c00d4a76,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -448,6 +515,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 069775205a8e64b3ba428b27c00d4a76, type: 3}
+--- !u!114 &1582934663396855726 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3078957847060471538, guid: 069775205a8e64b3ba428b27c00d4a76,
+    type: 3}
+  m_PrefabInstance: {fileID: 1582934663396855725}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d46c1bed822804aedbb69f8219d46ab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1582934663396855727 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1513904469924475858, guid: 069775205a8e64b3ba428b27c00d4a76,
+    type: 3}
+  m_PrefabInstance: {fileID: 1582934663396855725}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 333cedf3cac304b7c9da8397a03de095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2935147708558171068
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -564,6 +655,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620016872668194018, guid: 563854efe26b44687bc7bd202ae4a63a,
+        type: 3}
+      propertyPath: m_text
+      value: 'Level : '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 563854efe26b44687bc7bd202ae4a63a, type: 3}
