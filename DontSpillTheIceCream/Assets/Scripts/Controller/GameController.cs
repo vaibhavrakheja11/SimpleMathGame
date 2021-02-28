@@ -18,6 +18,10 @@ namespace DropIceCream
 
         public QuestionGenerator  questionGenerator;
 
+        public LevelManager  levelManager;
+
+        public SkillPointManager skillPointManager;
+
         private void Awake()
         {
             if (_instance != null && _instance != this)
